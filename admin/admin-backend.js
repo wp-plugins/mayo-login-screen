@@ -1,31 +1,24 @@
 jQuery(document).ready(function($){
-	
-	var $preview = $('#login_screen_preview');
-	$('.color_field').wpColorPicker({
-		change: function(event, ui){
-			setTimeout(
-				function(){
-					mayo_login_screen_live_style();
-				}, 10);
-			},
+	var $preview = $('#login_screen_preview');
+	$('.color_field').wpColorPicker({
+		change: function(event, ui){
+			setTimeout(
+				function(){
+					mayo_login_screen_live_style();
+				}, 10);
+			},
 	});
-	
-	//-- Live Style --
-	
-	$('select.live_style').change(function(){
-		mayo_login_screen_live_style();
+	//-- Live Style --
+	$('select.live_style').change(function(){
+		mayo_login_screen_live_style();
 	});
-	
-	$('span.remove').click(function(){
-		$(this).prev('input').val('');
-		mayo_login_screen_live_style();
+	$('span.remove').click(function(){
+		$(this).prev('input').val('');
+		mayo_login_screen_live_style();
 	});
-	
-	
-	function mayo_login_screen_live_style(){
-
+	
+	function mayo_login_screen_live_style(){
 		var $css = $('#mayo_login_screen_live_style_template').html();
-		
 		if($('#login_screen_form_button_bg_color').val()!==''){
 			var $button_bg_color = tinycolor($('#login_screen_form_button_bg_color').val());
 			$('#login_screen_form_button_border_color').val(tinycolor.darken($button_bg_color, amount = 10));

@@ -8,7 +8,6 @@
 	
 	<?php
 	global $mayo_login_screen_option;
-	
 	if(isset($_POST)){
 		
 			if(isset($_POST['mayo_login_screen_submit'])){
@@ -23,7 +22,7 @@
 				
 				update_option('mayo_login_screen_option', $mayo_login_screen_option);
 				}
-			}
+			}
 			elseif(isset($_POST['mayo_login_screen_reset'])){
 				if(check_admin_referer( 'mayo_login_screen_setting' )){
 					delete_option('mayo_login_screen_option');
@@ -32,7 +31,6 @@
 			}
 		
 	}
-	
 	
 	?>
 	
@@ -62,8 +60,8 @@
 		<br>
 		
 		<div class="input_option">
-			<label class="label-block">Background color </label>
-			<input type="text" value="" id="login_screen_bg_color" name="login_screen_bg_color" class="color_field live_style" data-default-color="#F1F1F1" value="<?php echo $mayo_login_screen_option['login_screen_bg_color']; ?>"/>
+			<label class="label-block">Background color </label>
+			<input type="text" id="login_screen_bg_color" name="login_screen_bg_color" class="color_field live_style" value="<?php echo $mayo_login_screen_option['login_screen_bg_color']; ?>"/>
 		</div>
 		
 		<div class="input_option">
@@ -155,7 +153,7 @@
 		</style>
 		<div id="mayo_login_screen_live_style_template">
 .login { background-color: %%login_screen_bg_color%%; background-image: url('%%login_screen_bg_image%%'); background-repeat: %%login_screen_bg_repeat%%; background-position: %%login_screen_bg_position_y%% %%login_screen_bg_position_x%%; background-size: %%login_screen_bg_size%%; }
-.login #login h1 a, .login #login h1 a:hover { color: %%login_screen_h1_color%%;}
+.login #login h1 a, .login #login h1 a:hover { background: transparent; text-indent: 0; color: %%login_screen_h1_color%%;line-height: 1.3em;margin: 0px auto 25px;padding: 0px;text-decoration: none;outline: 0px none;overflow: hidden;display: block;width: auto;height: auto;font-weight: bold;text-indent: 0px;background: none repeat scroll 0% 0% transparent;font-size: 28px;}
 #loginform { background-color: %%login_screen_form_bg_color%%; }
 #loginform #wp-submit { background-color: %%login_screen_form_button_bg_color%%; border-color: %%login_screen_form_button_border_color%%; color: %%login_screen_form_button_text_color%%; box-shadow: inset 0 1px 0 rgba(255,255,255,.25),0 1px 0 rgba(0,0,0,.15); }
 #loginform label { color: %%login_screen_label_text_color%%; }
