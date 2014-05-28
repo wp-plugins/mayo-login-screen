@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: MAYO - Custom Login Screen
+* Plugin Name: MAYO - Login Screen
 * Plugin URI: http://PassionInDesign.com
 * Description: Let you customize the default Wordpress login screen without coding.
 * Version: 1.1
