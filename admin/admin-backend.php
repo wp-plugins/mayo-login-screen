@@ -1,4 +1,4 @@
-<?
+<?php
 /*
 ==============================
 Table of content
@@ -48,4 +48,19 @@ function mayo_admin_login_screen_page_enqueue(){
 	//wp_enqueue_script( 'jquery_xcolor');
 	wp_enqueue_script( 'tinycolor');
 }
-?>
+
+
+
+add_action( 'plugins_loaded', 'mayo_login_screen_export_file' );
+function mayo_login_screen_export_file(){
+	if( isset( $_POST['mayo_login_screen_export'] ) && check_admin_referer( 'mayo_login_screen_setting' ) ){
+		header("Content-type: application/x-msdownload");
+		header("Content-Disposition: attachment; filename=mayo-login-screen.json");
+		header("Pragma: no-cache");
+		header("Expires: 0");
+		
+		global $mayo_login_screen_option;
+		echo json_encode($mayo_login_screen_option);
+		exit();
+	}
+}

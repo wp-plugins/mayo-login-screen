@@ -1,3 +1,5 @@
+#mayo_login_screen_import_file { display: none; }
+
 .label-block { width: 14em; display: inline-block; }
 
 .input_option { margin-bottom:0.2em; }
@@ -21,7 +23,9 @@ span.remove:hover{
 color:#111;
 }
 
-#mayo_login_screen_reset {
+.text-muted { color: #bbb; }
+
+.btn-muted {
 background: transparent none;
 border: none;
 color: #bbb;
@@ -31,7 +35,8 @@ line-height: 28px;
 cursor: pointer;
 }
 
-#mayo_login_screen_reset:hover { color: red; }
+.btn-muted:hover { color: #777; }
+.btn-muted.warning:hover { color: red; }
 
 /* The Preview */
 #mayo_login_screen_live_style_template { display: none; }
@@ -167,3 +172,7 @@ cursor: pointer;
 #backtoblog {
     margin: 16px 0px 0px;
 }
+
+.btn-subtle { cursor: pointer; display: inline-block; width: 16px; height: 16px; background: rgba(0,0,0,0.2); text-align: center; color: #fff; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 20px; }
+
+.btn-subtle:hover { background: rgba(0,0,0,0.4); color: #fff; }
