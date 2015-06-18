@@ -61,13 +61,16 @@ function mayo_login_screen_url( $url ) {
 			case '@post':
 				$url = get_permalink( get_option( 'page_for_posts' ) );
 			break;
-			case '@null':
+			case '':
 				$url = '';
 			break;
 			default:
 				$url = $mayo_login_screen_option['login_screen_logo_link'];
 			break;
 		}
+	}
+	else{
+		$url = '';
 	}
 	return $url;
 }
